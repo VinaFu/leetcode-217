@@ -1,7 +1,7 @@
 # leetcode-217
 
 
-1) bruce force:
+1) bruce force/ out of time:
 
             def containsDuplicate(nums):
                   exist = []
@@ -20,12 +20,26 @@
                   for val in nums:
                           if val not in dict:
                                   dict[val] = 1
+                                  # why 1 ?
                           else:
                                   return True
                   print(dict)
                   return False
                   
-3) set - easiest:
+3) sorting:
+
+             def containsDuplicate(self, nums: List[int]) -> bool:
+                    l =  len(nums)
+                    if l < 2:
+                        return False
+                    nums.sort()
+                    for i in range(l-1):
+                        if nums[i] == nums[i+1]:
+                            return True
+                    return False
+                    
+
+4) set - easiest:
 
            def containsDuplicate(nums):
                 if len(nums) != len(set(nums)):
