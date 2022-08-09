@@ -25,6 +25,18 @@
                                   return True
                   print(dict)
                   return False
+               
+               ##my dict:
+                    dict = {}
+                    for i in range(len(nums)):
+                            key = nums[i]
+                            dict[key] = i
+                            print(dict)
+                            print(key)
+                    for i in range(len(nums)):
+                            if nums[i] in dict and dict[nums[i]] != i:
+                                    return True
+                    return False
                   
 3) sorting:
 
